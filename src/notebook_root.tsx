@@ -36,7 +36,7 @@ const anonDoc = {
   created: new Date(),
   owner: {
     displayName: "Anonymous",
-    photoURL: require("./img/anon_profile.png"),
+    photoURL: require("url:./img/anon_profile.png"),
     uid: ""
   },
   title: "Anonymous Notebook",

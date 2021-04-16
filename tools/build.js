@@ -68,6 +68,7 @@ function makeBundle(options = {}) {
       engines: {
         browsers: ["last 1 Chrome version"]
       },
+      publicUrl: "/propel/",
       distDir: wdir
     },
     logLevel: process.env.CI ? 1 : 3,

@@ -228,7 +228,7 @@ export class NotebookRoot extends Component<
 
     return (
       <div class="notebook">
-        <GlobalHeader subtitle="Notebook" subtitleLink="notebook">
+        <GlobalHeader subtitle="Notebook" subtitleLink="/propel/notebook">
           <UserMenu userInfo={this.props.userInfo} />
         </GlobalHeader>
         {body}

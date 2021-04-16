@@ -37,10 +37,10 @@ const anonDoc = {
   owner: {
     displayName: "Anonymous",
     photoURL: require("url:./img/anon_profile.png"),
-    uid: ""
+    uid: "",
   },
   title: "Anonymous Notebook",
-  updated: new Date()
+  updated: new Date(),
 };
 
 export interface FixedProps {
@@ -209,7 +209,7 @@ export class NotebookRoot extends Component<
           save={this.handleNotebookSave.bind(this)}
           clone={this.handleNotebookClone.bind(this)}
           initialDoc={this.state.doc}
-          ref={ref => (this.notebookRef = ref)}
+          ref={(ref) => (this.notebookRef = ref)}
           userInfo={this.props.userInfo}
         />
       );
@@ -228,7 +228,7 @@ export class NotebookRoot extends Component<
 
     return (
       <div class="notebook">
-        <GlobalHeader subtitle="Notebook" subtitleLink="/notebook">
+        <GlobalHeader subtitle="Notebook" subtitleLink="notebook">
           <UserMenu userInfo={this.props.userInfo} />
         </GlobalHeader>
         {body}
@@ -238,6 +238,6 @@ export class NotebookRoot extends Component<
 }
 
 function nbUrl(nbId: string): string {
-  const u = window.location.origin + "/notebook?nbId=" + nbId;
+  const u = window.location.origin + "/propel/notebook?nbId=" + nbId;
   return u;
 }
